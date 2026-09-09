@@ -22,7 +22,7 @@ class BootReceiver : BroadcastReceiver() {
 
         val prefs = context.getSharedPreferences("freefcc", Context.MODE_PRIVATE)
         if (prefs.getBoolean("auto_fcc", false)) {
-            FccKeepaliveService.start(context)
+            HeadlessAutoFccService.start(context)
         }
     }
 }
